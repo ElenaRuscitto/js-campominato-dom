@@ -5,19 +5,30 @@
 }
 
 header {
-  height: 120px;
+  height: 80px;
   background-color: #f2f9f1; 
 }
 
 body { 
 	background-color: #5c715e;
-  /* height: 100vh;  */
+  height: 100vh;
+
+  overflow: hidden;
 }
 
 footer {
-  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
   background-color: #f2f9f1; 
-  line-height: 80px;
+  line-height: 50px;
+} 
+
+.er-container {
+
+  /* height: calc(100% - 170px); */
 }
 
 .btn-play {
@@ -31,16 +42,16 @@ footer {
 }
 
 .box {
+  margin: 30px auto 0;
   background-color: #5c715e; 
-  width: 800px;
+  width: 500px;
   aspect-ratio: 1;
-
+  
 }
 
 .square {
   width: calc(100% / 10); 
   aspect-ratio: 1; 
- 
   border: 1px solid black;
   background-color: #b6cdbd;
   cursor: pointer;
@@ -62,6 +73,8 @@ footer {
 
 .sqClicked{
   background-color: #71a0a5;
+  /* per non contare più volte la stessa casella */
+  pointer-events: none;
 }
 
 .bomb {

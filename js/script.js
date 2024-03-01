@@ -7,6 +7,9 @@ const livelDiff = document.querySelector('.difficolta');
 const numBom = [];
 const totBomb = 16;
 
+const output = document.querySelector('.output');
+let contatoreOutput = 0;
+
 reset();
 console.log(reset);
 
@@ -78,8 +81,13 @@ function generate(numeri) {
     }
   */
 
+  // aggiungo la classe 'bomb' per colorare lo square di rosso con numeri esgtratti dall'array
   if (numBom.includes(this.sqID)) {
     sq.classList.add('bomb');
+    output.innerHTML = `Boom! Sei esploso! Il tuo punteggio è ${contatoreOutput}`;
+
+  } else {
+    contatoreOutput++;
   }
 
     // METODO TERNARIO per attaccare il numero allo square
