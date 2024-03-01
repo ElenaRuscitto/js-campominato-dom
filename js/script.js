@@ -4,10 +4,8 @@ const containerBox = document.querySelector('.box');
 const btnPlay = document.querySelector('.btn-play');
 const livelDiff = document.querySelector('.difficolta');
 
-
+const numBom = [];
 const totBomb = 16;
-
-const myBomb = [];
 
 reset();
 console.log(reset);
@@ -26,6 +24,7 @@ btnPlay.addEventListener('click', startPlay);
 // 2.reset
 function reset() {
   containerBox.innerHTML= '';
+  numBom.length = 0;
 }
 
 // 1. al click del bottone Play, si vede la griglia di gioco
@@ -79,8 +78,12 @@ function generate(numeri) {
     }
   */
 
+  if (numBom.includes(this.sqID)) {
+    square.classList.add('bomb');
+  }
+
     // METODO TERNARIO
-    // this.innerHTML = (this.innerHTML === '') ? this.innerHTML = numeri : this.innerHTML = '';
+    this.innerHTML = (this.innerHTML === '') ? this.innerHTML = numeri : this.innerHTML = '';
 
     // 6. cambio colore al click con azzurro
     this.classList.add('sqClicked');
@@ -95,8 +98,8 @@ function generate(numeri) {
 // estrazione randomica bombe da 1 a 16 per array vuoto
 
 function nBomb(variDiff) {
- 
-  const numBom = [];
+  // const numBom = [];
+
   let generatoreNumeri;
 
   while (numBom.length < totBomb) {
@@ -107,14 +110,6 @@ function nBomb(variDiff) {
     }
   }
 
-  // for (let i = 1; i <= totBomb; i++) {
-
-  //   generatoreNumeri = Math.ceil(Math.random() * variDiff); 
-  //   // console.log(i);
-  //   numBom.push(generatoreNumeri);
-
-  //   myBomb.push(generatoreNumeri);
-  // }
 
   console.log(numBom);
   return numBom; 
