@@ -6,8 +6,7 @@ const livelDiff = document.querySelector('.difficolta');
 
 
 const totBomb = 16;
-const numBom = [];
-let contatoreSquare ;
+
 
 
 reset();
@@ -40,6 +39,9 @@ function startPlay (){
   }else if (sceltaDiff == 'hard'){
     numeriContati = 49;
   }
+
+  // nBomb(numeriContati);
+  // console.log(nBomb(numeriContati));
 
   for (let i = 1; i <= numeriContati; i++){
     const square = generate(i) ;
@@ -91,12 +93,19 @@ function generate(numeri) {
 
 // estrazione randomica bombe da 1 a 16 per array vuoto
 
-function numbBomb () {
-  const numeriBomb = Math.ceil(Math.random() * variDiff); 
-  for (let i = 1; i = totBomb; i++) {
-    console.log(i);
+function nBomb(variDiff) {
+  const numBom = [];
+ 
+  let contatoreSquare;
+
+  for (let i = 1; i <= totBomb; i++) {
+
+    contatoreSquare = Math.ceil(Math.random() * variDiff); 
+    // console.log(i);
+    numBom.push(contatoreSquare);
   }
 
 
-  return numeriBomb;
+  return numBom; 
 }
+console.log(numBom);
