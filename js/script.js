@@ -70,7 +70,7 @@ function generate(numeri) {
     console.log(this);
     console.log(numeri);
 
-  /** CON IF
+  /** CON IF per attaccare il numero allo square
     if(this.innerHTML === ''){
       this.innerHTML = this.sqID;
     }else{
@@ -79,11 +79,11 @@ function generate(numeri) {
   */
 
   if (numBom.includes(this.sqID)) {
-    square.classList.add('bomb');
+    sq.classList.add('bomb');
   }
 
-    // METODO TERNARIO
-    this.innerHTML = (this.innerHTML === '') ? this.innerHTML = numeri : this.innerHTML = '';
+    // METODO TERNARIO per attaccare il numero allo square
+    // this.innerHTML = (this.innerHTML === '') ? this.innerHTML = numeri : this.innerHTML = '';
 
     // 6. cambio colore al click con azzurro
     this.classList.add('sqClicked');
