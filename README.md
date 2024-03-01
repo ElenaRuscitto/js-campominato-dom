@@ -13,5 +13,7 @@ La partita termina quando il giocatore clicca su una bomba o quando raggiunge il
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
 
 ## SVOLGIMENTO
-1. creo una variabile globale per le 16 bombe. funzione random
-2. array vuoto che verrà popolato dalle 16 bombe
+1. creo arrey vuoto + variabile che gli dico 16 bomb
+2. faccio una funzione per far si che ad ogni ciclo, si estragga un numero random (16) 
+3. se il numero estratto è uguale ad un'altro e ne deve estrarre un'altro   
+4. array globale vuoto che verrà popolato dalle 16 bombe
